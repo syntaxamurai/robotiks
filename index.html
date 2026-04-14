@@ -1,13 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robokids Africa</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexaBot Labs — Robotics Education for Young Minds | Kamakis, Kenya</title>
+  <meta name="description" content="NexaBot Labs empowers the next generation of engineers and innovators through hands-on robotics education in Kamakis, Kenya. Programs for ages 7–18." />
+  <meta name="keywords" content="robotics Kenya, robotics Kamakis, kids robotics, STEM education Kenya, youth engineering, NexaBot Labs" />
+  <meta property="og:title" content="NexaBot Labs — Robotics Education for Young Minds" />
+  <meta property="og:description" content="Hands-on robotics programs for youth in Kamakis, Kenya. Building tomorrow's engineers today." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.nexabotlabs.co.ke/" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <h1>Hello Robokids Africa</h1>
-    <script src="script.js"></script>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="4" y="10" width="6" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="18" y="10" width="6" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="8" y="6" width="12" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="11" cy="13" r="1.5" fill="currentColor"/>
+            <circle cx="17" cy="13" r="1.5" fill="currentColor"/>
+            <line x1="11" y1="22" x2="11" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="17" y1="22" x2="17" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="14" y1="2" x2="14" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">NexaBot<span class="logo-accent">Labs</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Programs</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+            <span class="toggle-icon sun">☀</span>
+            <span class="toggle-icon moon">☽</span>
+          </span>
+        </button>
+        <button class="nav-burger" id="nav-burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-scan-line"></div>
+    <div class="container hero-inner">
+      <div class="hero-tag"><span class="tag-dot"></span> Kamakis, Kenya</div>
+      <h1 class="hero-title">
+        We Build<br/>
+        <span class="hero-title-accent">Young Engineers</span><br/>
+        One Robot at<br/>a Time
+      </h1>
+      <p class="hero-sub">Hands-on robotics education for children and teens aged 7–18. Real hardware. Real code. Real futures.</p>
+      <div class="hero-cta">
+        <a href="services.html" class="btn btn-primary">Explore Programs</a>
+        <a href="contact.html" class="btn btn-ghost">Book a Free Demo</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Students Trained</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">12</span><span class="stat-label">Active Courses</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">4yrs</span><span class="stat-label">In Operation</span></div>
+      </div>
+    </div>
+    <div class="hero-robot-frame">
+      <div class="robot-display">
+        <div class="robot-head">
+          <div class="robot-eye left"></div>
+          <div class="robot-eye right"></div>
+          <div class="robot-mouth"><span></span><span></span><span></span></div>
+        </div>
+        <div class="robot-body">
+          <div class="robot-chest-panel">
+            <div class="chest-light l1"></div>
+            <div class="chest-light l2"></div>
+            <div class="chest-light l3"></div>
+          </div>
+        </div>
+        <div class="robot-arms">
+          <div class="robot-arm left"></div>
+          <div class="robot-arm right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Arduino</span><span class="mx">✦</span>
+      <span>Raspberry Pi</span><span class="mx">✦</span>
+      <span>Lego Mindstorms</span><span class="mx">✦</span>
+      <span>Python</span><span class="mx">✦</span>
+      <span>Scratch</span><span class="mx">✦</span>
+      <span>Mechanical Design</span><span class="mx">✦</span>
+      <span>AI & Sensors</span><span class="mx">✦</span>
+      <span>3D Printing</span><span class="mx">✦</span>
+      <span>Arduino</span><span class="mx">✦</span>
+      <span>Raspberry Pi</span><span class="mx">✦</span>
+      <span>Lego Mindstorms</span><span class="mx">✦</span>
+      <span>Python</span><span class="mx">✦</span>
+      <span>Scratch</span><span class="mx">✦</span>
+      <span>Mechanical Design</span><span class="mx">✦</span>
+      <span>AI & Sensors</span><span class="mx">✦</span>
+      <span>3D Printing</span><span class="mx">✦</span>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// WHY NEXABOT</span>
+        <h2 class="section-title">Learning by <em>Doing</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">⚙</div>
+          <h3>Hands-On Hardware</h3>
+          <p>Every student gets physical components — motors, sensors, microcontrollers. No simulations, real robots.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🧠</div>
+          <h3>Structured Curriculum</h3>
+          <p>Age-appropriate programs from basic mechanics to machine learning — a clear learning ladder.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h3>Competition Ready</h3>
+          <p>We prepare students for regional and national robotics competitions, building confidence and teamwork.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👩‍🏫</div>
+          <h3>Expert Instructors</h3>
+          <p>Certified engineers who are also passionate educators — patient, practical, and inspiring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS PREVIEW -->
+  <section class="section programs-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// OUR PROGRAMS</span>
+        <h2 class="section-title">Pick Your <em>Track</em></h2>
+      </div>
+      <div class="programs-grid">
+        <a href="services.html" class="program-card">
+          <div class="program-num">01</div>
+          <h3>Junior Builders</h3>
+          <p class="program-age">Ages 7 – 10</p>
+          <p>Introduction to robotics using Lego and block-based coding. Builds creativity and problem-solving.</p>
+          <span class="program-arrow">→</span>
+        </a>
+        <a href="services.html" class="program-card">
+          <div class="program-num">02</div>
+          <h3>Code & Circuit</h3>
+          <p class="program-age">Ages 11 – 14</p>
+          <p>Arduino programming, basic electronics, and building autonomous robots from scratch.</p>
+          <span class="program-arrow">→</span>
+        </a>
+        <a href="services.html" class="program-card featured">
+          <div class="program-num">03</div>
+          <h3>Advanced Robotics</h3>
+          <p class="program-age">Ages 15 – 18</p>
+          <p>Raspberry Pi, Python, computer vision, and competition-level project engineering.</p>
+          <span class="program-arrow">→</span>
+        </a>
+        <a href="services.html" class="program-card">
+          <div class="program-num">04</div>
+          <h3>School Workshops</h3>
+          <p class="program-age">All ages</p>
+          <p>We bring the lab to your school. One-day and multi-day STEM workshops tailored to your curriculum.</p>
+          <span class="program-arrow">→</span>
+        </a>
+      </div>
+      <div class="section-cta">
+        <a href="services.html" class="btn btn-primary">View All Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY TEASER -->
+  <section class="section gallery-teaser">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// FROM OUR LAB</span>
+        <h2 class="section-title">Robots in <em>Action</em></h2>
+      </div>
+      <div class="gallery-grid-preview">
+        <div class="gp-item gp-large">
+          <div class="gp-placeholder" data-label="Students assembling Arduino bot"></div>
+        </div>
+        <div class="gp-item">
+          <div class="gp-placeholder" data-label="Competition day 2024"></div>
+        </div>
+        <div class="gp-item">
+          <div class="gp-placeholder" data-label="Raspberry Pi workshop"></div>
+        </div>
+        <div class="gp-item">
+          <div class="gp-placeholder" data-label="First robot built by age 8"></div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="gallery.html" class="btn btn-ghost">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// WHAT PARENTS SAY</span>
+        <h2 class="section-title">Real <em>Feedback</em></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p>"My daughter joined at 10 and built her first autonomous vehicle at 12. The instructors are incredible."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">NK</div>
+            <div>
+              <strong>Ngina Kamau</strong>
+              <span>Parent, Ruiru</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p>"Best investment in my son's future. He now thinks like an engineer. NexaBot is the real deal."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">JO</div>
+            <div>
+              <strong>James Odhiambo</strong>
+              <span>Parent, Kamakis</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p>"Our school invited them for a workshop. The kids were engaged the entire day. Truly exceptional team."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">FM</div>
+            <div>
+              <strong>Fatuma Mwangi</strong>
+              <span>Deputy Principal, Kamakis Primary</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to build something <em>amazing</em>?</h2>
+      <p>Register your child today or enquire about school programs.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <a href="about.html" class="btn btn-ghost">Learn About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                <rect x="4" y="10" width="6" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="18" y="10" width="6" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="8" y="6" width="12" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="11" cy="13" r="1.5" fill="currentColor"/>
+                <circle cx="17" cy="13" r="1.5" fill="currentColor"/>
+                <line x1="11" y1="22" x2="11" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="17" y1="22" x2="17" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="2" x2="14" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo-text">NexaBot<span class="logo-accent">Labs</span></span>
+          </a>
+          <p>Empowering Kenya's youth through robotics and engineering education. Based in Kamakis.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Programs</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <a href="services.html">Junior Builders</a>
+          <a href="services.html">Code & Circuit</a>
+          <a href="services.html">Advanced Robotics</a>
+          <a href="services.html">School Workshops</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Reach Us</h4>
+          <p>📍 Kamakis, Ruiru, Kiambu County</p>
+          <p>📞 +254 700 000 000</p>
+          <p>✉ hello@nexabotlabs.co.ke</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 NexaBot Labs. All rights reserved.</span>
+        <span class="footer-mono">v2.4.1 // Kamakis, KE</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/254700000000?text=Hello%20NexaBot%20Labs%2C%20I%27m%20interested%20in%20your%20robotics%20programs." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
