@@ -689,34 +689,52 @@ p { color: var(--text-muted); }
 .gp-item { border-radius: var(--radius-lg); overflow: hidden; }
 .gp-large { grid-row: 1 / 3; }
 .gp-placeholder {
-  width: 100%; height: 100%;
-  background: var(--surface-2);
+  width: 100%;
+  height: 100%;
+  background-color: var(--surface-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+}
+.gp-placeholder::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-faint);
-  transition: background var(--transition);
-  min-height: 200px;
-  position: relative;
+
+  background: rgba(0,0,0,0.35);
+  padding: 6px 8px;
+  border-radius: 6px;
 }
-.gp-placeholder::before {
-  content: attr(data-label);
-  position: absolute;
-  bottom: 16px; left: 16px;
-  right: 16px;
+
+.gp-placeholder:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
 }
-.gp-placeholder:hover { background: var(--surface-3); }
 
 /* Circuit trace overlay on large placeholder */
-.gp-item.gp-large .gp-placeholder {
+.gp-item.gp-large .gp-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 32px 32px;
+
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 /* =========================================================
